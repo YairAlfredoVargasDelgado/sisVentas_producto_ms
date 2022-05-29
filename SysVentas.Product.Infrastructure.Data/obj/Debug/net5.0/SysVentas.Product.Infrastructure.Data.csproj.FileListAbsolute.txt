@@ -1,0 +1,15 @@
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\bin\Debug\net5.0\SysVentas.Product.Infrastructure.Data.deps.json
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\bin\Debug\net5.0\SysVentas.Product.Infrastructure.Data.dll
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\bin\Debug\net5.0\ref\SysVentas.Product.Infrastructure.Data.dll
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\bin\Debug\net5.0\SysVentas.Product.Infrastructure.Data.pdb
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\bin\Debug\net5.0\SysVentas.Product.Domain.dll
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\bin\Debug\net5.0\SysVentas.Product.Domain.pdb
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.csproj.AssemblyReference.cache
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.GeneratedMSBuildEditorConfig.editorconfig
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.AssemblyInfoInputs.cache
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.AssemblyInfo.cs
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.csproj.CoreCompileInputs.cache
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.csproj.CopyComplete
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.dll
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\ref\SysVentas.Product.Infrastructure.Data.dll
+F:\Especialización\Arquitecturas Web\SistemasDeVentas\sisVentas_producto_ms\SysVentas.Product.Infrastructure.Data\obj\Debug\net5.0\SysVentas.Product.Infrastructure.Data.pdb

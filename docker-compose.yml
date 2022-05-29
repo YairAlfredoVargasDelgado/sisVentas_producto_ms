@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  web:    
+    container_name: sisventas_product_ms
+    image: ivancontry/sisventas_producto_ms:latest  
+    environment:
+      - ConnectionString= Server=sql.data;User=sa;Password=Pass@word;DataBase=ProductBD;
+    ports:
+      - "5003:80"
+    depends_on:
+      - sql.data
+  
+  sql.data:
+    image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+    container_name: sisventas_product_db
+    environment: 
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "1435:1435"
+    
