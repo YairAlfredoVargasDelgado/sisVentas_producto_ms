@@ -1,0 +1,66 @@
+Post
+http://localhost:5003/api/category
+{
+  "name": "Tecnología",
+  "code": "Tec-01",
+  "date": "2022-06-02T02:02:33.717Z"
+}
+Put
+http://localhost:5003/api/category
+{
+  "name": "Tecnología",
+  "code": "Tec-001",
+  "date": "2022-06-02T02:02:33.717Z"
+}
+Get
+http://localhost:5003/api/category
+Put
+http://localhost:5003/api/category/inactive
+{
+  "id": 1
+}
+http://localhost:5003/api/category/inactive
+{
+  "id": 1
+}
+Post
+http://localhost:5003/api/category/product
+{
+  "categoryId": 1,
+  "name": "Portatil Acer aspire 15",
+  "code": "Acer-15",
+  "date": "2022-06-02T02:05:05.490Z",
+  "amount": 5
+}
+
+Put
+http://localhost:5003/api/category/product
+{
+  "categoryId": 1,
+  "id":1,
+  "name": "Portatil Acer aspire 15",
+  "code": "Acer-15",
+  "date": "2022-06-02T02:05:05.490Z",
+  "amount": 5
+}
+http://localhost:5003/api/category/product/inactive
+{
+  "categoryId": 1,
+  "id": 1
+}
+http://localhost:5003/api/category/product/active
+{
+  "categoryId": 1,
+  "id": 1
+}
+http://localhost:5003/api/category/product/stocks
+{
+  "products": [
+    {
+      "productId": 1,
+      "cuantity": 4
+    }
+  ]
+}
+Get
+http://localhost:5003/api/category/1/product

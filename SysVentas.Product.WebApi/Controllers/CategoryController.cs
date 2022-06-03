@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using SysVentas.Products.Application.Categorys;
+using System.Threading.Tasks;
 using SysVentas.Products.Application.Categorys;
 using SysVentas.Products.Application.Categorys.Products;
 
@@ -19,79 +19,79 @@ namespace SysVentas.Products.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(RegisterCategoryRequest request)
+        public async Task<IActionResult> PostAsync(RegisterCategoryRequest request)
         {
-            var response =  _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var response = _mediator.Send(new GetCategoryRequest());
+            var response =  await _mediator.Send(new GetCategoryRequest());
             return Ok(response);
         }
 
         [HttpPut]
-        public IActionResult Put(UpdateCategoryRequest request)
+        public async Task<IActionResult> Put(UpdateCategoryRequest request)
         {
-            var response =  _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPut("inactive")]
-        public IActionResult PutInactive(InactiveCategoryRequest request)
+        public async Task<IActionResult> PutInactive(InactiveCategoryRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPut("active")]
-        public IActionResult PutActive(ActiveCategoryRequest request)
+        public async Task<IActionResult> PutActive(ActiveCategoryRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPost("product")]
-        public IActionResult PostProduct(RegisterProductRequest request)
+        public async Task<IActionResult> PostProduct(RegisterProductRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPut("product")]
-        public IActionResult PutProduct(UpdateProductRequest request)
+        public async Task<IActionResult> PutProduct(UpdateProductRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPut("product/inactive")]
-        public IActionResult PutInactive(InactiveProductRequest request)
+        public async Task<IActionResult> PutInactive(InactiveProductRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPut("product/active")]
-        public IActionResult PutActive(ActiveProductRequest request)
+        public async Task<IActionResult> PutActive(ActiveProductRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpPut("product/stocks")]
-        public IActionResult PutStocks(UpdateProductStoreRequest request)
+        public async Task<IActionResult> PutStocks(UpdateProductStoreRequest request)
         {
-            var response = _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpGet("{idcategory}/product")]
-        public IActionResult GetProduct(long idcategory)
+        public async Task<IActionResult> GetProduct(long idcategory)
         {
-            var response = _mediator.Send(new GetProductForCategoryRequest { CategoryId = idcategory});
+            var response = await _mediator.Send(new GetProductForCategoryRequest { CategoryId = idcategory});
             return Ok(response);
         }
     }

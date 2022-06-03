@@ -2,7 +2,7 @@ version: "3.3"
 services:
   web:    
     container_name: sisventas_product_ms
-    image: ivancontry/sisventas_producto_ms:latest  
+    image: ivancontry/sisventas_producto_ms:1.0 
     environment:
       - ConnectionString= Server=sql.data;User=sa;Password=Pass@word;DataBase=ProductBD;
     ports:
