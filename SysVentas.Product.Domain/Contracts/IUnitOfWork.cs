@@ -12,6 +12,7 @@ namespace SysVentas.Products.Domain.Base
     {
         IGenericRepository<T> GenericRepository<T>() where T : BaseEntity;
         public ICategoryRepository CategorysRepository { get; }
+        public IProductsRepository ProductsRepository { get; }
         Task<int> CommitAsync();
         int Commit();
     }

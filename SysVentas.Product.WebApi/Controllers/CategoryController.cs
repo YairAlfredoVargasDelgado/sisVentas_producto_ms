@@ -94,5 +94,11 @@ namespace SysVentas.Products.WebApi.Controllers
             var response = await _mediator.Send(new GetProductForCategoryRequest { CategoryId = idcategory});
             return Ok(response);
         }
+
+        [HttpGet("all-products")]
+        public async Task<IActionResult> GetAllProducts()
+        {
+            return Ok(await _mediator.Send(new GetAllProductsRequest()));
+        }
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SysVentas.Products.Infrastructure.Data;
 
 namespace SysVentas.Products.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ProductDataContext))]
-    partial class ProductDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220609045753_UpdateProductTableAsEntity")]
+    partial class UpdateProductTableAsEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

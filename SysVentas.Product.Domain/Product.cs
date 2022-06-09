@@ -7,10 +7,8 @@ using SysVentas.Products.Domain.Base;
 
 namespace SysVentas.Products.Domain
 {
-    public class Product
+    public class Product: Entity<long>
     {
-        public long Id { get; set; }
-        public string Status { get; set; }
         public DateTime Date { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }

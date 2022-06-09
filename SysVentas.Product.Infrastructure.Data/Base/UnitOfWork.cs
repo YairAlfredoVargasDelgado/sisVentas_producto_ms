@@ -14,6 +14,7 @@ namespace SysVentas.Products.Infrastructure.Data.Base
         private IDbContext _dbContext;
 
         private ICategoryRepository _categorysRepository;
+        private IProductsRepository _productsRepository;
 
         public UnitOfWork(IDbContext dbContext)
         {
@@ -23,11 +24,20 @@ namespace SysVentas.Products.Infrastructure.Data.Base
         {
             return new GenericRepository<T>(_dbContext);
         }
+
         public ICategoryRepository CategorysRepository
         {
             get
             {
                 return _categorysRepository ??= new CategoryRepository(_dbContext);
+            }
+        }
+
+        public IProductsRepository ProductsRepository
+        {
+            get
+            {
+                return _productsRepository ??= new ProductRepository(_dbContext);
             }
         }
         public Task<int> CommitAsync()
