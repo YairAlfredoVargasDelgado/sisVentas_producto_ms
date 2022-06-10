@@ -114,7 +114,7 @@ namespace SysVentas.Products.Domain
 
         }
                 
-        public void EditProduct(long idProduct,string code, string name, int amount)
+        public void EditProduct(long idProduct,string code, string name, int amount, float price)
         {
             var validator = CanEditProduct(idProduct,amount);
             if (!validator.IsValid)
@@ -122,7 +122,7 @@ namespace SysVentas.Products.Domain
                 throw new DomainException(validator);
             }
             var product = GetProductForId(idProduct);
-            product.Edit(code, name, amount);
+            product.Edit(code, name, amount, price);
         }
 
         public DomainValidation CanAddProduct(string code,int amount) {
@@ -143,14 +143,14 @@ namespace SysVentas.Products.Domain
         
         }
 
-        public Product AddProduct(DateTime date,string code, string name, int amount) {
+        public Product AddProduct(DateTime date,string code, string name, int amount, float price) {
             var validator = CanAddProduct(code,amount);
             if (!validator.IsValid) 
             {
                 throw new DomainException(validator);
             }
 
-            var product = new Product(date, name, code, amount);
+            var product = new Product(date, name, code, amount, price);
             Products.Add(product);
             return product;
         }

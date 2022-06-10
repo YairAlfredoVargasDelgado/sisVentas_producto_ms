@@ -15,25 +15,28 @@ namespace SysVentas.Products.Domain
         public decimal Amount { get; set; }
         public Category Category { get; set; }
         public long CategoryId { get; set; }
+        public float Price { get; set; }
 
         public Product()
         {
 
         }
-        public Product(DateTime date, string name, string code, decimal amount)
+        public Product(DateTime date, string name, string code, decimal amount, float price)
         {
             Date = date;
             Name = name;
             Code = code;
             Amount = amount;
             Status = StatusView.Get(StatusObject.Active);
+            Price = price;
         }
 
-        internal void Edit(string code, string name, decimal amount)
+        internal void Edit(string code, string name, decimal amount, float price)
         {
             Name = name;
             Code = code;
             Amount = amount;
+            Price = price;
         }
 
         internal void Inactive()

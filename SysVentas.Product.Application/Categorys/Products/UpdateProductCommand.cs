@@ -21,7 +21,7 @@ namespace SysVentas.Products.Application.Categorys.Products
         public Task<UpdateProductResponse> Handle(UpdateProductRequest request, CancellationToken cancellationToken)
         {
             var category = _unitOfWork.CategorysRepository.FindFirstOrDefault(t=> t.Id == request.CategoryId);
-            category.EditProduct(idProduct:request.Id,code: request.Code, name: request.Name, amount: request.Amount);
+            category.EditProduct(idProduct:request.Id,code: request.Code, name: request.Name, amount: request.Amount, request.Price);
             _unitOfWork.Commit();
             return Task.FromResult(new UpdateProductResponse(request.Id));
         }
@@ -34,6 +34,7 @@ namespace SysVentas.Products.Application.Categorys.Products
         public string Code { get; set; }
         public DateTime Date { get; set; }
         public int Amount { get; set; }
+        public float Price { get; set; }
     }
     public record UpdateProductResponse
     {

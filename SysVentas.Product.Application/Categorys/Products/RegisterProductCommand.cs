@@ -21,7 +21,7 @@ namespace SysVentas.Products.Application.Categorys.Products
         public Task<RegisterProductResponse> Handle(RegisterProductRequest request, CancellationToken cancellationToken)
         {
             var category = _unitOfWork.CategorysRepository.FindFirstOrDefault(t=> t.Id == request.CategoryId);
-            var product = category.AddProduct(date: request.Date, code: request.Code, name: request.Name, amount: request.Amount);
+            var product = category.AddProduct(date: request.Date, code: request.Code, name: request.Name, amount: request.Amount, request.Price);
             _unitOfWork.Commit();
             return Task.FromResult(new RegisterProductResponse(product.Id));
         }
@@ -33,6 +33,7 @@ namespace SysVentas.Products.Application.Categorys.Products
         public string Code { get; set; }
         public DateTime Date { get; set; }
         public int Amount { get; set; }
+        public float Price { get; set; }
     }
     public record RegisterProductResponse
     {
