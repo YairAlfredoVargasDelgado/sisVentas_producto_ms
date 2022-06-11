@@ -8,6 +8,7 @@ http://localhost:5003/api/category
 Put
 http://localhost:5003/api/category
 {
+  "id": 1,
   "name": "Tecnología",
   "code": "Tec-001",
   "date": "2022-06-02T02:02:33.717Z"
@@ -27,10 +28,11 @@ Post
 http://localhost:5003/api/category/product
 {
   "categoryId": 1,
-  "name": "Portatil Acer aspire 15",
-  "code": "Acer-15",
+  "name": "Portatil Lenovo IdeaPAD 5",
+  "code": "Lenovo-RZ5000",
   "date": "2022-06-02T02:05:05.490Z",
-  "amount": 5
+  "amount": 5,
+  "price": 45
 }
 
 Put
@@ -64,3 +66,6 @@ http://localhost:5003/api/category/product/stocks
 }
 Get
 http://localhost:5003/api/category/1/product
+
+Get
+http://localhost:5003/api/category/all-products
