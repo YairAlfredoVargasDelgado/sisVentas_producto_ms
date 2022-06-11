@@ -100,5 +100,11 @@ namespace SysVentas.Products.WebApi.Controllers
         {
             return Ok(await _mediator.Send(new GetAllProductsRequest()));
         }
+
+        [HttpGet("product/{productId}")]
+        public async Task<IActionResult> GetProductById(long productId)
+        {
+            return Ok(await _mediator.Send(new GetProductByIdRequest(productId)));
+        }
     }
 }
