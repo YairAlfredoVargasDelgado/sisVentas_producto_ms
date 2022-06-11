@@ -2,7 +2,7 @@ version: "3.3"
 services:
   web:    
     container_name: sysventas_product_ms
-    image: zipusbraid/sysventas_producto_ms:v2 
+    image: zipusbraid/sysventas_producto_ms:v3 
     environment:
       - ConnectionString= Server=sql.data;User=sa;Password=Pass@word;DataBase=ProductBD;
     ports:
